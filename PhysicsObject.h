@@ -7,10 +7,10 @@ private:
   float mass;
   float bounciness;
   float friction;
-  float posx;
-  float posy;
-  float velx;
-  float vely;
+  float posX;
+  float posY;
+  float velX;
+  float velY;
 
 public:
   PhysicsObject(float mass, float bounciness, float friction);
