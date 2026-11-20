@@ -1,0 +1,7 @@
+CompileFlags:
+  Add: [-I, Game/SDP_Simulator_Template/SDP_Simulator/simulator_libraries, -std=c++14]
+---
+If:
+  PathMatch: .*\.h
+CompileFlags:
+  Add: [-xc++]
