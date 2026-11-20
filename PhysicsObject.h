@@ -1,9 +1,19 @@
-#ifndef PHYSICSOBJECT_H
-#define PHYSICSOBJECT_H
+#pragma once
+
+#define GRAVITY_CONSTANT 9.81;
 
 class PhysicsObject {
-public:
-  PhysicsObject(float mass, float bounciness);
-};
+private:
+  float mass;
+  float bounciness;
+  float friction;
+  float posx;
+  float posy;
+  float velx;
+  float vely;
 
-#endif
+public:
+  PhysicsObject(float mass, float bounciness, float friction);
+  void applyForceFromOther(float force, PhysicsObject other);
+  void tick();
+};
