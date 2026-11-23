@@ -1,6 +1,6 @@
 #include "PhysicsObject.h"
-PhysicsObject::PhysicsObject(float mass, float bounciness, float friction)
-    : mass(mass), bounciness(bounciness), friction(friction) {
+PhysicsObject::PhysicsObject(float mass, bool dynamic)
+    : mass(mass), dynamic(dynamic) {
     velX = 0;
     velY = 0;
     posX = 0;
