@@ -5,6 +5,8 @@
 
 int main() {
   LCD.WriteLine("Hello World!");
+  LCD.SetFontColor(BLACK);
+
   while (1) {
     LCD.Update();
 

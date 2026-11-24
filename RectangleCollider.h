@@ -18,8 +18,10 @@ private:
   float bounciness, friction;
   static std::vector<RectangleCollider *> colliders;
   Vector2d checkCollision(RectangleCollider *other);
-  std::array<Line, 4> getLines();
+
   std::array<Vector2d, 4> getPoints();
+
+  static Vector2d findIntercept(const Line &a, const Line &b);
 
 public:
   /**
@@ -37,6 +39,8 @@ public:
    * tick the collider
    */
   void tick();
+
+  std::array<Line, 4> getLines();
 
 };
 
