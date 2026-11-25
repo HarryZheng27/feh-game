@@ -10,6 +10,9 @@
 
 enum class RendererType {
     DEFAULT,
+    COLLIDER_COLORED,
+    COLLIDER_WITH_SPRITE,
+    COLLIDER_WITH_ANIMATION
 
 };
 class BoxRenderer {

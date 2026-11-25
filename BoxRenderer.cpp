@@ -3,3 +3,7 @@
 //
 
 #include "BoxRenderer.h"
+
+BoxRenderer::BoxRenderer() {
+
+}
