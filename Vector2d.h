@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 class Vector2d {
 public:
@@ -63,4 +64,6 @@ public:
    * @return the magnitude of this
    */
   float getMagnitude() const;
+
+  static Vector2d getAverage(const std::vector<Vector2d> &points);
 };

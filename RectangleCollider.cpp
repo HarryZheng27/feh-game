@@ -33,8 +33,8 @@ Vector2d RectangleCollider::checkCollision(RectangleCollider *other) {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 point = findIntercept(linesOther[j], linesOther[i]);
-                if (point.x < ) {
-
+                if (point.x < lines[j].right && point.x > lines[j].left && point.x < lines[j].right && point.x > lines[j].left) {
+                    points.push_back(point);
                 }
             }
         }

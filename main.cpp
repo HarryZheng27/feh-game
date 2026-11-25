@@ -9,7 +9,13 @@ int main() {
 
   while (1) {
     LCD.Update();
-
   }
   return 0;
+}
+
+/**
+ * updates background sprites, this should be called before any other sprite updates so layers layer correctly
+ */
+void tick_background() {
+
 }

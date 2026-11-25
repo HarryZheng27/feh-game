@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <complex>
+#include <vector>
 
 Vector2d::Vector2d(const float x, const float y) : x(x), y(y) {}
 
@@ -27,4 +28,14 @@ Vector2d Vector2d::inverse() const {
 
 float Vector2d::getMagnitude() const {
   return std::sqrt(x*x + y*y);
+}
+
+Vector2d Vector2d::getAverage(const std::vector<Vector2d > &points) {
+  float avgx = 0;
+  float avgy = 0;
+  for (int i = 0; i < points.size(); ++i) {
+    avgx += (points[i].x-avgx)/(i+1);
+    avgy += (points[i].y-avgy)/(i+1);
+  }
+  return {avgx, avgy};
 }
